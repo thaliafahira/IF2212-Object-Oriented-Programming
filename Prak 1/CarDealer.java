@@ -1,4 +1,4 @@
-class CarDealer {
+public class CarDealer {
     private static int totalCar = 0;
     private String brand;
     private int carInDealer;
@@ -34,7 +34,7 @@ class CarDealer {
     public int getCarInDealer() {
         return this.carInDealer;
     }
-    
+
     /**
      * getCarPrice
      * @return carPrice
@@ -61,17 +61,15 @@ class CarDealer {
 
     /**
      * sellCar
-     * Menjual mobil sebanyak amount. Ketika berhasil, mengurangi mobil di dealer dan juga totalCar
-     * sekaligus menambah profit sesuai dengan harga mobil dan jumlah mobil yang terjual
-     * Prekondisi: Mobil di dealer mungkin tidak cukup
      * @param amount
      * @return void
      */
     public void sellCar(int amount) {
-        if (this.carInDealer >= amount){
+        if(amount <= this.carInDealer)
+        {
+            this.carInDealer -= amount;
             this.profit += (amount*this.carPrice);
             CarDealer.totalCar -= amount;
         }
-        
     }
 }

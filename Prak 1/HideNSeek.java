@@ -1,4 +1,4 @@
-public public class HideNSeek {
+public class HideNSeek {
     private String seeker;
     private int player;
     private int playerFound;
@@ -50,5 +50,4 @@ public public class HideNSeek {
             playerFound++;
         }
     }
-    
 }
